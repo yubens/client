@@ -1,0 +1,56 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="ar.com.idus.www.buyidusapp">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <supports-screens
+            android:resizeable="true"
+            android:smallScreens="true"
+            android:normalScreens="true"
+            android:largeScreens="true"
+            android:anyDensity="true"
+            />
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+            android:usesCleartextTraffic="true">
+        <activity android:name=".ErrorActivity" />
+        <activity android:name=".DistributorActivity" />
+        <activity
+                android:name=".OrderInquiryActivity"
+                android:label="@string/order_inquiry_title" />
+        <activity
+                android:name=".BasketActivity"
+                android:label="@string/basket_title"
+                android:windowSoftInputMode="adjustResize" />
+        <activity
+                android:name=".OrderActivity"
+                android:label="@string/order_title"
+                android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+                android:name=".DistributorSelectionActivity"
+                android:label="@string/dist_select_title" />
+        <activity
+                android:name=".RegisterActivity"
+                android:label="@string/register_title"
+                android:windowSoftInputMode="adjustResize"/>
+        <activity
+                android:name=".MainActivity"
+                >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".BasketActivity"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:id="@+id/listBody"
+            android:layout_width="350dp"
+            android:layout_height="360dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="24dp" />
+
+        <TextView
+            android:id="@+id/txtStringTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="40dp"
+            android:layout_below="@+id/listBody"
+            android:text="@string/txtTotal"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/txtTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/listBody"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="40dp"
+            android:layout_toEndOf="@+id/txtStringTotal"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/editObservations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtStringTotal"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="24dp"
+            android:ems="10"
+            android:hint="@string/txtObservations"
+            android:inputType="textPersonName" />
+
+
+        <Button
+            android:id="@+id/btnSendOrder"
+            style="@style/IdusButton"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editObservations"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/btnSendOrder"
+            app:layout_constraintTop_toBottomOf="@+id/editObservations" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            style="@style/IdusButton"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editObservations"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:text="@string/btnCancel"
+            app:layout_constraintStart_toEndOf="@+id/btnSendOrder"
+            app:layout_constraintTop_toBottomOf="@+id/editObservations" />
+
+
+    </RelativeLayout>
+
+
+
+
+
+</ScrollView>
